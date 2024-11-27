@@ -1,46 +1,139 @@
-# Getting Started with Create React App
+# Role-Based Access Control (RBAC) UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern and comprehensive Role-Based Access Control UI built with React, TypeScript, and Material-UI. This application provides a complete interface for managing users, roles, and permissions in a secure system.
+
+## Features
+
+### Dashboard
+- Overview statistics for users, roles, and permissions
+- User activation rate tracking
+- Recent users list
+- Top roles by permission count
+
+### User Management
+- View and manage users with their roles and status
+- Add, edit, and delete users
+- Assign roles to users
+- Track user status (Active/Inactive)
+
+### Role Management
+- View and manage roles with their associated permissions
+- Create, edit, and delete roles
+- Assign permissions to roles
+- Hierarchical permission structure
+
+### Permission Management
+- View permissions organized by module
+- Permission matrix showing role-permission relationships
+- Clear visualization of permission assignments
+
+## Technology Stack
+
+- **React**: Frontend library for building user interfaces
+- **TypeScript**: Static typing for better development experience
+- **Material-UI**: Modern UI component library
+- **React Query**: Data fetching and state management
+- **React Router**: Navigation and routing
+- **Axios**: HTTP client for API requests
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd rbac-ui
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm start
+```
+
+The application will be available at `http://localhost:3000`.
+
+## Project Structure
+
+```
+src/
+├── components/         # Reusable UI components
+│   └── layout/        # Layout components
+├── pages/             # Page components
+├── services/          # API and mock services
+├── types/             # TypeScript type definitions
+└── App.tsx            # Main application component
+```
+
+## Mock Data
+
+The application currently uses mock data for demonstration purposes. The mock services can be found in `src/services/` and include:
+
+- `mockData.ts`: Initial data for users, roles, and permissions
+- `userService.ts`: User management operations
+- `roleService.ts`: Role and permission management operations
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start`: Runs the app in development mode
+- `npm test`: Launches the test runner
+- `npm run build`: Builds the app for production
+- `npm run eject`: Ejects from Create React App
 
-### `npm start`
+## Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Managing Users
+1. Navigate to the Users page
+2. Click "Add User" to create a new user
+3. Fill in user details and assign roles
+4. Use edit/delete actions to manage existing users
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Managing Roles
+1. Navigate to the Roles page
+2. Click "Add Role" to create a new role
+3. Define role details and assign permissions
+4. Use edit/delete actions to manage existing roles
 
-### `npm test`
+### Viewing Permissions
+1. Navigate to the Permissions page
+2. View permissions organized by module
+3. Use the permissions matrix to understand role-permission relationships
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Security Considerations
 
-### `npm run build`
+- The UI implements role-based access control at the interface level
+- Backend implementation should validate all requests
+- Proper authentication should be implemented in production
+- Session management should be added for security
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Future Enhancements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- User authentication and authorization
+- Audit logging for user actions
+- Role hierarchy support
+- Permission group management
+- Advanced user search and filtering
+- Bulk user/role operations
+- Export/import functionality
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
 
-### `npm run eject`
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## License
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is licensed under the MIT License - see the LICENSE file for details.
